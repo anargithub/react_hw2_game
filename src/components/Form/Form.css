@@ -1,0 +1,43 @@
+.form {
+    width: 500px; 
+    height: 500px;
+    background: rgba(207, 96, 22, 0.527);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+}
+
+.formOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 111px;
+    height: 96px;
+}
+
+h1 {
+    font-size: 25px;
+    line-height: 38px;
+}
+
+.formOne p {
+    font-size: 32px;
+    color: rgb(211, 77, 28);
+}
+
+.formTwo {
+    width: 200px;
+    height: 100px;
+    background: orange;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+

@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Game from "./components/Game/Game";
+import Win from "./components/Win/Win";
 
 function App() {
+  const [winner, setWinner] = useState({ win: false, name: "" });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${winner && "win"} App`}>
+      <Game nameOne={"Player 1"} nameTwo={"Player 2"} setWinner={setWinner} />
+      {winner.win && <Win winner={winner.name} />}
     </div>
   );
 }

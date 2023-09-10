@@ -1,0 +1,29 @@
+.game {
+    width: 740px;
+    height: 445px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .game_buttons {
+    height: 350px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .game_buttons_two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  .game_buttons svg {
+    width: 100px;
+    height: 100px;
+    color: rgb(51, 151, 96);
+  }
+  
