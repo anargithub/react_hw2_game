@@ -14,10 +14,11 @@ import {
 export default function Game ({ nameOne, nameTwo, setWinner }) {
   const [playerOneScore, setPlayerOneScore] = useState(0);
   const [playerTwoScore, setPlayerTwoScore] = useState(0);
-  const [currentPointsOne, setCurrentPointsOne] = useState(0);
+  const [currentPointsOne, setCurrentPointsOne] = useState(99);
   const [currentPointsTwo, setCurrentPointsTwo] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState(true);
   const [randomNumber, setRandomNumber] = useState(null);
+
 
   const icons = [
     <BsFillDice1Fill />,
@@ -52,11 +53,13 @@ export default function Game ({ nameOne, nameTwo, setWinner }) {
       setPlayerOneScore(playerOneScore + currentPointsOne);
       if (playerOneScore + currentPointsOne >= 100) {
         setWinner({ win: true, name: nameOne });
+   
       }
     } else {
       setPlayerTwoScore(playerTwoScore + currentPointsTwo);
       if (playerTwoScore + currentPointsTwo >= 100) {
         setWinner({ win: true, name: nameTwo });
+      
       }
     }
     setCurrentPointsOne(0);

@@ -9,7 +9,8 @@ function App() {
   return (
     <div className={`${winner && "win"} App`}>
       <Game nameOne={"Player 1"} nameTwo={"Player 2"} setWinner={setWinner} />
-      {winner.win && <Win winner={winner.name} />}
+      {winner.win && 
+      <Win winner={winner.name}/>}
     </div>
   );
 }
